@@ -1,4 +1,4 @@
-#include <termio.h>
+#include <termios.h>
 #include <unistd.h>
 
 void enableRawMode() {
