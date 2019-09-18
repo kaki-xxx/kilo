@@ -51,6 +51,12 @@ char editorReadKey() {
     return c;
 }
 
+/*** output ***/
+
+void editorRefreshScreen() {
+    write(STDOUT_FILENO, "\x1b[2J", 4);
+}
+
 /*** input ***/
 
 void editorProcessKeyPress() {
@@ -70,6 +76,7 @@ int main() {
 
     while (1) {
         editorProcessKeyPress();
+        editorRefreshScreen();
     }
 
     return 0;
