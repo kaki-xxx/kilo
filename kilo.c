@@ -505,7 +505,6 @@ void editorFind() {
         E.coloff = saved_coloff;
         E.rowoff = saved_rowoff;
     }
-    free(query);
 }
 
 /*** append buffer ***/
