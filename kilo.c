@@ -338,7 +338,7 @@ void editorSelectSyntaxHighlight() {
     for (unsigned int j = 0; j < HLDB_ENTRIES; j++) {
         struct editorSyntax *s = &HLDB[j];
         unsigned int i = 0;
-        while (s->filematch[j]) {
+        while (s->filematch[i]) {
             int is_ext = (s->filematch[i][0] == '.');
             if ((is_ext && ext && !strcmp(ext, s->filematch[i])) ||
                 (!is_ext && strstr(E.filename, s->filematch[i]))) {
